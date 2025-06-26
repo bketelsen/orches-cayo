@@ -1,0 +1,17 @@
+[Unit]
+Description=Orches: container orchestrator
+
+[Container]
+Image=ghcr.io/orches-team/orches:0.1.0
+Exec=run
+Volume=/var/lib/orches:/var/lib/orches
+Volume=/etc/containers/systemd:/etc/containers/systemd
+Mount=type=bind,source=/run/systemd,destination=/run/systemd
+PodmanArgs=--pid host
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
