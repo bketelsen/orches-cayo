@@ -1,0 +1,9 @@
+[Container]
+Image=docker.io/jellyfin/jellyfin
+Volume=config:/config:Z
+Volume=cache:/cache:Z
+Volume=media:/media:Z
+PublishPort=8096:8096
+
+[Install]
+WantedBy=multi-user.target default.target
