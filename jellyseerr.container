@@ -5,7 +5,7 @@ After=network-online.target
 [Container]
 ContainerName=prowlarr
 EnvironmentFile=/var/lib/orches/repo/media/jellyseerr/.env
-Image=lscr.io/linuxserver/jellyseerr:latest
+Image=docker.io/fallenbagel/jellyseerr:latest
 Volume=/mnt/fast/configs/arr/jellyseerr/appdata/config:/config:Z
 PublishPort=5055:5055
 Network=media.network
