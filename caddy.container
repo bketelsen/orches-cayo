@@ -12,7 +12,7 @@ Volume=/mnt/fast/configs/caddy/config:/config:Z
 Network=cayo.network
 
 [Service]
-Restart=on-failure
+Restart=unless-stopped
 X-Version=1
 
 [Install]

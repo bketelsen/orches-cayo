@@ -9,5 +9,5 @@ Volume=/var/lib/orches/repo/glance/assets:/app/assets:Z
 Network=cayo.network
 
 [Service]
-Restart=on-failure
+Restart=unless-stopped
 X-Version=2

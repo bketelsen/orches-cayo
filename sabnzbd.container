@@ -1,0 +1,15 @@
+[Container]
+ContainerName=sabnzbd
+EnvironmentFile=/var/lib/orches/repo/media/sabnzbd/.env
+Image=lscr.io/linuxserver/sabnzbd:latest
+Volume=/mnt/fast/configs/arr/sabnzbd:/config:Z
+Volume=/mnt/slow/media:/media:Z
+PublishPort=8080:8080
+Network=media.network
+
+[Service]
+Restart=unless-stopped
+
+
+[Install]
+WantedBy=multi-user.target default.target

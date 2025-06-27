@@ -8,5 +8,5 @@ PublishPort=5432:5432
 Network=joplin.network
 
 [Service]
-Restart=on-failure
+Restart=unless-stopped
 X-Version=1
