@@ -3,7 +3,7 @@ Description=Jellyseerr
 After=network-online.target
 
 [Container]
-ContainerName=prowlarr
+ContainerName=jellyseerr
 EnvironmentFile=/var/lib/orches/repo/media/jellyseerr/.env
 Image=docker.io/fallenbagel/jellyseerr:latest
 Volume=/mnt/fast/configs/arr/jellyseerr/appdata/config:/config:Z
