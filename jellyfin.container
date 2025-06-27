@@ -5,5 +5,9 @@ Volume=cache:/cache:Z
 Volume=media:/media:Z
 PublishPort=8096:8096
 
+[Service]
+Restart=on-failure
+X-Version=1
+
 [Install]
 WantedBy=multi-user.target default.target

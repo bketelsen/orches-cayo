@@ -6,6 +6,8 @@ Image=docker.io/glanceapp/glance:latest
 PublishPort=8888:8080
 Volume=/var/lib/orches/repo/glance/config:/app/config:Z
 Volume=/var/lib/orches/repo/glance/assets:/app/assets:Z
+Network=cayo.network
 
 [Service]
-Restart=always
+Restart=on-failure
+X-Version=1
