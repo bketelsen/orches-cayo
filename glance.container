@@ -1,0 +1,11 @@
+# glance.container
+[Container]
+ContainerName=glance
+EnvironmentFile=/var/lib/orches/repo/glance/.env
+Image=glanceapp/glance:latest
+PublishPort=8888:8080
+Volume=/var/lib/orches/repo/glance/config:/glance/config:/app/config
+Volume=/var/lib/orches/repo/glance/assets:/app/assets
+
+[Service]
+Restart=always
