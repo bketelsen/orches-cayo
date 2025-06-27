@@ -1,9 +1,15 @@
 [Unit]
-Description=Caddy demo container
+Description=Caddy reverse proxy
 
 [Container]
 Image=docker.io/library/caddy:2.10.0-alpine
-PublishPort=8080:80
+PublishPort=80:80
+PublishPort=443:443
+PublishPort=443:443/udp
+Volume=/mnt/fast/configs/caddy/etc/caddy:/etc/caddy
+Volume=/mnt/fast/configs/caddy/data:/data
+Volume=/mnt/fast/configs/caddy/config:/config
+
 
 [Install]
 WantedBy=multi-user.target
