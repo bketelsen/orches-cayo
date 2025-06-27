@@ -6,7 +6,7 @@ Image=docker.io/library/caddy:2.10.0-alpine
 PublishPort=80:80
 PublishPort=443:443
 PublishPort=443:443/udp
-Volume=/mnt/fast/configs/caddy/etc/caddy:/etc/caddy:Z
+Volume=/var/lib/orches/repo/caddy/etc/caddy:/etc/caddy:Z
 Volume=/mnt/fast/configs/caddy/data:/data:Z
 Volume=/mnt/fast/configs/caddy/config:/config:Z
 
