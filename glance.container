@@ -4,8 +4,8 @@ ContainerName=glance
 EnvironmentFile=/var/lib/orches/repo/glance/.env
 Image=docker.io/glanceapp/glance:latest
 PublishPort=8888:8080
-Volume=/var/lib/orches/repo/glance/config:/app/config
-Volume=/var/lib/orches/repo/glance/assets:/app/assets
+Volume=/var/lib/orches/repo/glance/config:/app/config:Z
+Volume=/var/lib/orches/repo/glance/assets:/app/assets:Z
 
 [Service]
 Restart=always
