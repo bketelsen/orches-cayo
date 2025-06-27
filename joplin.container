@@ -1,0 +1,11 @@
+# joplin.container
+[Container]
+ContainerName=joplin
+Image=docker.io/joplin/server
+EnvironmentFile=/var/lib/orches/repo/joplin/.env
+PublishPort=22300:22300
+Network=joplin.network
+
+[Service]
+Restart=on-failure
+X-Version=1
