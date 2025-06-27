@@ -67,8 +67,6 @@
           markets:
             - symbol: SPY
               name: S&P 500
-            - symbol: BTC-USD
-              name: Bitcoin
             - symbol: NVDA
               name: NVIDIA
             - symbol: AAPL
