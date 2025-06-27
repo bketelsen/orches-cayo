@@ -1,0 +1,12 @@
+# joplindb.container
+[Container]
+ContainerName=joplindb
+Image=docker.io/library/postgres:16
+EnvironmentFile=/var/lib/orches/repo/joplin/.env
+Volume=/mnt/fast/data/joplindb:/var/lib/postgresql/data:Z
+
+Network=cayo.network
+
+[Service]
+Restart=on-failure
+X-Version=1
