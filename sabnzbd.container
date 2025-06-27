@@ -1,3 +1,7 @@
+[Unit]
+Description=Sabnzbd
+After=network-online.target
+
 [Container]
 ContainerName=sabnzbd
 EnvironmentFile=/var/lib/orches/repo/media/sabnzbd/.env
@@ -6,6 +10,7 @@ Volume=/mnt/fast/configs/arr/sabnzb:/config:Z
 Volume=/mnt/slow/media:/media:Z
 PublishPort=8080:8080
 Network=media.network
+AutoUpdate=registry
 
 [Service]
 Restart=unless-stopped

@@ -1,0 +1,22 @@
+[Unit]
+Description=Radarr
+After=network-online.target prowlarr.service sabnzbd.service
+Requires=prowlarr.service sabnzbd.service
+
+
+[Container]
+ContainerName=radarr
+EnvironmentFile=/var/lib/orches/repo/media/radarr/.env
+Image=lscr.io/linuxserver/radarr:latest
+Volume=/mnt/fast/configs/arr/radarr:/config:Z
+Volume=/mnt/slow/media:/media:Z
+PublishPort=7878:7878
+Network=media.network
+AutoUpdate=registry
+
+[Service]
+Restart=unless-stopped
+
+
+[Install]
+WantedBy=multi-user.target default.target

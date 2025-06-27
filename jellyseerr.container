@@ -1,0 +1,19 @@
+[Unit]
+Description=Jellyseerr
+After=network-online.target
+
+[Container]
+ContainerName=prowlarr
+EnvironmentFile=/var/lib/orches/repo/media/jellyseerr/.env
+Image=lscr.io/linuxserver/jellyseerr:latest
+Volume=/mnt/fast/configs/arr/jellyseerr/appdata/config:/config:Z
+PublishPort=5055:5055
+Network=media.network
+AutoUpdate=registry
+
+[Service]
+Restart=unless-stopped
+
+
+[Install]
+WantedBy=multi-user.target default.target

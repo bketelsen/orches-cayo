@@ -13,13 +13,36 @@ This repository provides rootful podman configuration for [orches](https://githu
 
 This repository contains sample unit files for running orches and a demo [Caddy](https://caddyserver.com/) webserver as rootful Podman containers. It is intended to be used as a starting point for your own orches deployments. You can fork this repository and add or modify unit files to manage your own containers and services.
 
+## Storage
+
+ZFS:
+
+```sh
+NAME   SIZE  MOUNT
+fast  1.81T  /mnt/fast
+slow  29.1T  /mnt/slow
+```
+
+Repo location:
+
+```sh
+/var/lib/orches/repo/
+```
+
+All paths in this repo are on disk relative to the above location.
+
 ## Container Port Mappings
 
-| Container File     | Published Ports           |
-| ------------------ | ------------------------- |
-| caddy.container    | 80:80,443:443,443:443/udp |
-| glance.container   | 8888:8080                 |
-| jellyfin.container | 8096:8096                 |
-| joplin.container   | 22300:22300               |
-| joplindb.container | None                      |
-| orches.container   | None                      |
+| Container File       | Published Ports            |
+| -------------------- | -------------------------- |
+| caddy.container      | 80:80,443:443,443:443/udp, |
+| glance.container     | 8888:8080,                 |
+| jellyfin.container   | 8096:8096,                 |
+| jellyseerr.container | 5055:5055,                 |
+| joplin.container     | 22300:22300,               |
+| joplindb.container   | 5432:5432,                 |
+| orches.container     | None                       |
+| prowlarr.container   | 9696:9696,                 |
+| radarr.container     | 7878:7878,                 |
+| sabnzbd.container    | 8080:8080,                 |
+| sonarr.container     | 8989:8989,                 |

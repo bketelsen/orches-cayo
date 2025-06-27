@@ -1,0 +1,19 @@
+[Unit]
+Description=Prowlarr
+After=network-online.target
+
+[Container]
+ContainerName=prowlarr
+EnvironmentFile=/var/lib/orches/repo/media/prowlarr/.env
+Image=lscr.io/linuxserver/prowlarr:latest
+Volume=/mnt/fast/configs/arr/prowlarr:/config:Z
+PublishPort=9696:9696
+Network=media.network
+AutoUpdate=registry
+
+[Service]
+Restart=unless-stopped
+
+
+[Install]
+WantedBy=multi-user.target default.target

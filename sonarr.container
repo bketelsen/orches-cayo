@@ -1,0 +1,22 @@
+[Unit]
+Description=Sonarr
+After=network-online.target prowlarr.service sabnzbd.service
+Requires=prowlarr.service sabnzbd.service
+
+
+[Container]
+ContainerName=sonarr
+EnvironmentFile=/var/lib/orches/repo/media/sonarr/.env
+Image=lscr.io/linuxserver/sonarr:latest
+Volume=/mnt/fast/configs/arr/sonarr:/config:Z
+Volume=/mnt/slow/media:/media:Z
+PublishPort=8989:8989
+Network=media.network
+AutoUpdate=registry
+
+[Service]
+Restart=unless-stopped
+
+
+[Install]
+WantedBy=multi-user.target default.target
