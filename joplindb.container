@@ -5,8 +5,7 @@ Image=docker.io/library/postgres:16
 EnvironmentFile=/var/lib/orches/repo/joplin/.env
 Volume=/mnt/fast/data/joplindb:/var/lib/postgresql/data:Z
 PublishPort=5432:5432
-
-Network=cayo.network
+Network=joplin.network
 
 [Service]
 Restart=on-failure
