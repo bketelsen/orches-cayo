@@ -1,6 +1,6 @@
 ![orches logo](https://raw.githubusercontent.com/orches-team/common/main/orches-logo-text.png)
 
-# orches-cayo: Rootful orches Repository
+# orches-cayo: Rootful podman definitions
 
 This repository provides rootful podman configuration for [orches](https://github.com/orches-team/orches), a simple git-ops tool for orchestrating [Podman](https://podman.io/) containers and systemd units on a single machine. It is designed for users who want to run orches and managed containers with root privileges, leveraging systemd system services and Podman rootful containers.
 
@@ -30,6 +30,12 @@ Repo location:
 ```
 
 All paths in this repo are on disk relative to the above location.
+
+## TODO
+
+- [ ] Move caddy from previous host
+- [ ] Wait for painful rsync
+- [ ] PaperlessNGX
 
 ## Container Port Mappings
 
