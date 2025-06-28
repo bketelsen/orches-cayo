@@ -10,30 +10,30 @@
     }
 }
 notes.ketelsen.cloud {
-	reverse_proxy 192.168.5.100:22300
+	reverse_proxy localhost:22300
 }
 
 request.ketelsen.cloud {
-	reverse_proxy 192.168.5.100:5055
+	reverse_proxy localhost:5055
 }
 paperless.ketelsen.cloud {
 	reverse_proxy 10.0.1.57:8100
 }
 
 series.ketelsen.cloud {
-	reverse_proxy 192.168.5.100:8989
+	reverse_proxy localhost:8989
 }
 
 movies.ketelsen.cloud {
-	reverse_proxy 192.168.5.100:7878
+	reverse_proxy localhost:7878
 }
 
 prowlarr.ketelsen.cloud {
-	reverse_proxy 192.168.5.100:9696
+	reverse_proxy localhost:9696
 }
 
 nzb.ketelsen.cloud {
-	reverse_proxy 192.168.5.100:8080
+	reverse_proxy localhost:8080
 }
 
 
