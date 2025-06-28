@@ -1,10 +1,6 @@
 
 {
 
-	cert_issuer zerossl {
-    email bketelsen@gmail.com
-	}
-
   cert_issuer acme {
     email bketelsen@gmail.com
   }

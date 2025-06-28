@@ -13,7 +13,7 @@ Network=cayo.network
 
 [Service]
 Restart=unless-stopped
-X-Version=3
+X-Version=4
 
 [Install]
 WantedBy=multi-user.target
