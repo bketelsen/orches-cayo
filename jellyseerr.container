@@ -10,6 +10,7 @@ Volume=/mnt/fast/configs/arr/jellyseerr/appdata/config:/config:Z
 PublishPort=5055:5055
 Network=media.network
 AutoUpdate=registry
+UserNS=keep-id:uid=1000,gid=1000
 
 [Service]
 Restart=unless-stopped
