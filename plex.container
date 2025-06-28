@@ -11,7 +11,6 @@ Volume=/mnt/fast/configs/arr/plex:/config:Z
 Volume=/mnt/slow/media:/media:Z
 Network=media.network
 AutoUpdate=registry
-PodName=plex
 PublishPort=32400:32400/tcp
 PublishPort=1900:1900/udp
 PublishPort=3005:3005/tcp
