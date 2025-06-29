@@ -3,7 +3,6 @@ Description=Radarr
 After=network-online.target prowlarr.service sabnzbd.service
 Requires=prowlarr.service sabnzbd.service
 
-
 [Container]
 ContainerName=radarr
 EnvironmentFile=/var/lib/orches/repo/media/radarr/.env
