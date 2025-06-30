@@ -2,10 +2,10 @@
 [Container]
 ContainerName=db
 Image=docker.io/library/postgres:17
-EnvironmentFile=/var/lib/orches/repo/paperless/.env
+EnvironmentFile=/var/lib/orches/repo/paperless/postgres/.env
 Volume=/mnt/fast/data/paperless/postgres:/data:Z
 Network=paperless.network
 
 [Service]
 Restart=unless-stopped
-X-Version=1
+X-Version=2
