@@ -7,11 +7,12 @@ Volume=/mnt/slow/persist/paperless/media:/usr/src/paperless/media:z
 Volume=/mnt/slow/persist/paperless/export:/usr/src/paperless/export:z
 Volume=/mnt/slow/persist/paperless/consume:/usr/src/paperless/consume:z
 EnvironmentFile=/var/lib/orches/repo/paperless/.env
-
+Secret=paperless-secret-key,type=env,target=PAPERLESS_SECRET_KEY
 PublishPort=8100:8000
 
 Network=paperless.network
 
 [Service]
 Restart=unless-stopped
+ExecStartPre=-podman secret exists paperless-secret-key || tr -dc A-Za-z0-9 </dev/urandom | head -c 26 | podman secret create paperless-secret-key
 X-Version=1
