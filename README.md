@@ -33,17 +33,13 @@ All paths in this repo are on disk relative to the above location.
 
 ## TODO
 
-- [ ] Move caddy from previous host
-- [ ] Wait for painful rsync
+- [x] Wait for painful rsync
 - [ ] PaperlessNGX
 
 ## Container Port Mappings
 
 | Container File       | Published Ports |
 | -------------------- | --------------- |
-| caddy.container      | 80:80           |
-|                      | 443:443/udp     |
-|                      | 443:443         |
 | glance.container     | 8888:8080       |
 | jellyfin.container   | 8096:8096       |
 | jellyseerr.container | 5055:5055       |
