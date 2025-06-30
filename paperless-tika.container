@@ -1,0 +1,9 @@
+# tika.container
+[Container]
+ContainerName=tika
+Image=docker.io/apache/tika:latest
+Network=paperless.network
+
+[Service]
+Restart=unless-stopped
+X-Version=1
