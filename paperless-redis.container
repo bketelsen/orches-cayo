@@ -1,0 +1,11 @@
+# redis.container
+[Container]
+ContainerName=broker
+Image=docker.io/library/redis:8
+EnvironmentFile=/var/lib/orches/repo/paperless/.env
+Volume=/mnt/fast/data/paperless/redis:/data:Z
+Network=paperless.network
+
+[Service]
+Restart=unless-stopped
+X-Version=1
