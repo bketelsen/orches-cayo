@@ -1,0 +1,17 @@
+# webserver.container
+[Container]
+ContainerName=webserver
+Image=ghcr.io/paperless-ngx/paperless-ngx:latest
+Volume=/mnt/fast/data/paperless/paperless:/usr/src/paperless/data:Z
+Volume=/mnt/slow/persist/paperless/media:/usr/src/paperless/media:z
+Volume=/mnt/slow/persist/paperless/export:/usr/src/paperless/export:z
+Volume=/mnt/slow/persist/paperless/consume:/usr/src/paperless/consume:z
+EnvironmentFile=/var/lib/orches/repo/paperless/.env
+
+PublishPort=8100:8000
+
+Network=paperless.network
+
+[Service]
+Restart=unless-stopped
+X-Version=1
