@@ -1,7 +1,7 @@
 # gotenberg.container
 [Container]
 ContainerName=gotenberg
-Image=docker.io/gotenberg/gotenberg:8.20
+Image=docker.io/gotenberg/gotenberg:8.21
 Exec=gotenberg --chromium-disable-javascript=true --chromium-allow-list=file:///tmp/.*
 Network=paperless.network
 
