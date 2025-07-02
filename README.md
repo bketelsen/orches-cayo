@@ -34,7 +34,7 @@ All paths in this repo are on disk relative to the above location.
 ## TODO
 
 - [x] Wait for painful rsync
-- [ ] PaperlessNGX
+- [x] PaperlessNGX
 
 ## Container Port Mappings
 

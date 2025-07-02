@@ -16,3 +16,6 @@ Network=paperless.network
 Restart=unless-stopped
 ExecStartPre=-podman secret exists paperless-secret-key || tr -dc A-Za-z0-9 </dev/urandom | head -c 26 | podman secret create paperless-secret-key -
 X-Version=1
+
+[Install]
+WantedBy=multi-user.target default.target

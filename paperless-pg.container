@@ -9,3 +9,6 @@ Network=paperless.network
 [Service]
 Restart=unless-stopped
 X-Version=2
+
+[Install]
+WantedBy=multi-user.target default.target
