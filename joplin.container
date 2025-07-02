@@ -9,3 +9,6 @@ Network=joplin.network
 [Service]
 Restart=unless-stopped
 X-Version=1
+
+[Install]
+WantedBy=multi-user.target default.target
