@@ -3,7 +3,7 @@
 ContainerName=db
 Image=docker.io/library/postgres:17
 EnvironmentFile=/var/lib/orches/repo/paperless/postgres/.env
-Volume=/mnt/fast/data/paperless/postgres:/data:Z
+Volume=/mnt/fast/data/paperless/postgres:/var/lib/postgresql/data :Z
 Network=paperless.network
 
 [Service]
