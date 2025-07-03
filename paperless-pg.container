@@ -3,12 +3,12 @@
 ContainerName=db
 Image=docker.io/library/postgres:16
 EnvironmentFile=/var/lib/orches/repo/paperless/postgres/.env
-Volume=/mnt/fast/data/paperless/postgres:/var/lib/postgresql/data :Z
+Volume=/mnt/fast/data/paperless/postgres:/var/lib/postgresql/data:Z
 Network=paperless.network
 
 [Service]
 Restart=unless-stopped
-X-Version=3
+X-Version=4
 
 [Install]
 WantedBy=multi-user.target default.target
